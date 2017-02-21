@@ -57,6 +57,7 @@ for root, dirs, files in os.walk(input_dir):
                     vid_writer.write(frame)
                 prev_frame = frame
                 ret, frame = cap.read()
+            cap.release()
             vid_writer.release()
         i += len(videos)
 
